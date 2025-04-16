@@ -144,4 +144,3 @@ func _on_project_save_pressed():
 
 	obj_project_modification.visible = false
 	load_projects_list()
-

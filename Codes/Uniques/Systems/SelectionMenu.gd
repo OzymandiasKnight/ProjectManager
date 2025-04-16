@@ -236,4 +236,3 @@ func image_paramters_actualise(node:WorkNode,index:float=-1):
 
 		obj_image_id.visible = !obj_image_path.visible
 		obj_image_download.visible = !obj_image_delete.visible
-

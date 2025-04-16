@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b2eie72higlnt"]
 
-[ext_resource type="Script" path="res://Codes/Instances/Nodes/SlidingNode.gd" id="1_ikhnr"]
+[ext_resource type="Script" uid="uid://csxv5frocdxot" path="res://Codes/Instances/Nodes/SlidingNode.gd" id="1_ikhnr"]
 [ext_resource type="Theme" uid="uid://d3mc6bsqrw6m6" path="res://RoundTheme.tres" id="2_jndvn"]
 
 [sub_resource type="Animation" id="Animation_tv8kb"]
@@ -21,7 +21,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2efjx"]
 _data = {
-"Select": SubResource("Animation_tv8kb")
+&"Select": SubResource("Animation_tv8kb")
 }
 
 [node name="Group" type="Control"]

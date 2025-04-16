@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cksut3e7sa137"]
 
-[ext_resource type="Script" path="res://Codes/Uniques/Systems/NodeMap.gd" id="1_f8ksb"]
+[ext_resource type="Script" uid="uid://27uqyy6kcf8q" path="res://Codes/Uniques/Systems/NodeMap.gd" id="1_f8ksb"]
 [ext_resource type="Texture2D" uid="uid://cvgw5usmbpk55" path="res://Textures/Uniques/Systems/CircleMap.svg" id="1_mssl2"]
 
 [node name="CircularMap" type="Control"]

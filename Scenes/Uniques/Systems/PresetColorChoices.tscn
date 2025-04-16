@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmv7pp24bsp7s"]
 
 [ext_resource type="PackedScene" uid="uid://2l0vwnei157m" path="res://Scenes/Instances/Interface/ColorChoice.tscn" id="1_1hhla"]
-[ext_resource type="Script" path="res://Codes/Instances/Classes/ScreenGrid.gd" id="1_yvbn2"]
+[ext_resource type="Script" uid="uid://mhyuh55fu6i7" path="res://Codes/Instances/Classes/ScreenGrid.gd" id="1_yvbn2"]
 
 [node name="Choices" type="GridContainer"]
 anchors_preset = -1

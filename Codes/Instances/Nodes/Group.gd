@@ -35,4 +35,3 @@ func _on_slide_detection_area_entered(area):
 
 func _on_slide_detection_area_exited(area):
 	get_node("Hover").play_backwards("Hover")
-

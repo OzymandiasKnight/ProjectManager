@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://w68kt8niyvyk"]
 
-[ext_resource type="Script" path="res://Codes/Uniques/Menus/ProjectManager.gd" id="1_dici2"]
+[ext_resource type="Script" uid="uid://w131vqtjpk5" path="res://Codes/Uniques/Menus/ProjectManager.gd" id="1_dici2"]
 [ext_resource type="Theme" uid="uid://d3mc6bsqrw6m6" path="res://RoundTheme.tres" id="2_8uqug"]
-[ext_resource type="Script" path="res://Codes/Instances/Classes/ScreenGrid.gd" id="3_8lo0y"]
+[ext_resource type="Script" uid="uid://mhyuh55fu6i7" path="res://Codes/Instances/Classes/ScreenGrid.gd" id="3_8lo0y"]
 [ext_resource type="PackedScene" uid="uid://5prbtcy0lb1l" path="res://Scenes/Uniques/Systems/Settings.tscn" id="5_4wqg1"]
 [ext_resource type="Texture2D" uid="uid://dpyjs18hfoswc" path="res://Textures/Instances/Icons/reload.svg" id="5_10dvw"]
 [ext_resource type="Theme" uid="uid://pg3x15qrd5nn" path="res://BorderTheme.tres" id="5_d22bn"]
@@ -40,7 +40,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mbftg"]
 _data = {
-"Load": SubResource("Animation_8d05p")
+&"Load": SubResource("Animation_8d05p")
 }
 
 [node name="ProjectManager" type="Node2D"]
@@ -340,7 +340,7 @@ expand_mode = 1
 
 [node name="Animation" type="AnimationPlayer" parent="Screen/Window/SplashScreen"]
 libraries = {
-"": SubResource("AnimationLibrary_mbftg")
+&"": SubResource("AnimationLibrary_mbftg")
 }
 
 [connection signal="text_changed" from="Screen/Window/TopBand/Searchbar" to="." method="_on_searchbar_text_changed"]

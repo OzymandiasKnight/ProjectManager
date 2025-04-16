@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://ckwbm54q6n26x"]
 
-[ext_resource type="Script" path="res://Codes/Instances/Nodes/Group.gd" id="1_5ut2h"]
+[ext_resource type="Script" uid="uid://dvb3e7814ub6x" path="res://Codes/Instances/Nodes/Group.gd" id="1_5ut2h"]
 [ext_resource type="Theme" uid="uid://d3mc6bsqrw6m6" path="res://RoundTheme.tres" id="2_u7a5m"]
-[ext_resource type="Shader" path="res://Shaders/Multiply.gdshader" id="3_0d16l"]
+[ext_resource type="Shader" uid="uid://dsiq7kgnp7sik" path="res://Shaders/Multiply.gdshader" id="3_0d16l"]
 [ext_resource type="Texture2D" uid="uid://c2v4euioql8k4" path="res://Textures/Instances/Icons/house.svg" id="4_fuari"]
 [ext_resource type="Theme" uid="uid://pg3x15qrd5nn" path="res://BorderTheme.tres" id="5_p2ko0"]
 
@@ -45,8 +45,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n7loo"]
 _data = {
-"Modify": SubResource("Animation_sd2oc"),
-"RESET": SubResource("Animation_q20b3")
+&"Modify": SubResource("Animation_sd2oc"),
+&"RESET": SubResource("Animation_q20b3")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqi0"]
@@ -95,7 +95,7 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a47rw"]
 _data = {
-"Hover": SubResource("Animation_4uo6a")
+&"Hover": SubResource("Animation_4uo6a")
 }
 
 [node name="Group" type="Control" node_paths=PackedStringArray("animation_modify")]
@@ -158,7 +158,7 @@ texture = ExtResource("4_fuari")
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_n7loo")
+&"": SubResource("AnimationLibrary_n7loo")
 }
 
 [node name="SlideDetection" type="Area2D" parent="."]
@@ -171,7 +171,7 @@ shape = SubResource("RectangleShape2D_3hqi0")
 
 [node name="Hover" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_a47rw")
+&"": SubResource("AnimationLibrary_a47rw")
 }
 
 [connection signal="area_entered" from="SlideDetection" to="." method="_on_slide_detection_area_entered"]

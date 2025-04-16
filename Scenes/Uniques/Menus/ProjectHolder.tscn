@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://6g5i1wm5tr6j"]
 
-[ext_resource type="Script" path="res://Codes/Uniques/Systems/ProjectHolder.gd" id="1_23b8i"]
+[ext_resource type="Script" uid="uid://cqv5e5hqcro0y" path="res://Codes/Uniques/Systems/ProjectHolder.gd" id="1_23b8i"]
 [ext_resource type="PackedScene" uid="uid://tcs04u0p3bxq" path="res://Scenes/Uniques/Systems/ProjectUI.tscn" id="2_x6e06"]
 [ext_resource type="Texture2D" uid="uid://bcog2hr1vwicd" path="res://Textures/Instances/Interface/DotPattern.svg" id="3_q7yur"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://fy1ibwng86nq"]
 
-[ext_resource type="Script" path="res://Codes/Instances/Nodes/Note.gd" id="1_pb571"]
+[ext_resource type="Script" uid="uid://cp7fs5tlayh8m" path="res://Codes/Instances/Nodes/Note.gd" id="1_pb571"]
 [ext_resource type="Theme" uid="uid://d3mc6bsqrw6m6" path="res://RoundTheme.tres" id="2_qqu40"]
 [ext_resource type="Theme" uid="uid://ctuiv2s4xinn4" path="res://SharpBorderTheme.tres" id="3_nkevb"]
 
@@ -37,8 +37,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qjglc"]
 _data = {
-"Modify": SubResource("Animation_6uysc"),
-"RESET": SubResource("Animation_nfk85")
+&"Modify": SubResource("Animation_6uysc"),
+&"RESET": SubResource("Animation_nfk85")
 }
 
 [node name="Note" type="Control" node_paths=PackedStringArray("animation_modify")]

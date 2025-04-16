@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwoqujkjgunul"]
 
 [ext_resource type="Texture2D" uid="uid://btr476xrhkjxw" path="res://Textures/Instances/Interface/NodePointer.svg" id="1_ignwu"]
-[ext_resource type="Script" path="res://Codes/Instances/Interface/NodePointer.gd" id="1_ro5hi"]
+[ext_resource type="Script" uid="uid://cjjb63r6addhb" path="res://Codes/Instances/Interface/NodePointer.gd" id="1_ro5hi"]
 
 [node name="Pointer" type="Node2D"]
 script = ExtResource("1_ro5hi")

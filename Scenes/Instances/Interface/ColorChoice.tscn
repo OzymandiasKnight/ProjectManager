@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://2l0vwnei157m"]
 
-[ext_resource type="Script" path="res://Codes/Instances/Interface/ColorChoice.gd" id="1_dqg4i"]
-[ext_resource type="Shader" path="res://Shaders/Multiply.gdshader" id="2_a7vvj"]
+[ext_resource type="Script" uid="uid://d3gpttb1aa1x0" path="res://Codes/Instances/Interface/ColorChoice.gd" id="1_dqg4i"]
+[ext_resource type="Shader" uid="uid://dsiq7kgnp7sik" path="res://Shaders/Multiply.gdshader" id="2_a7vvj"]
 [ext_resource type="Texture2D" uid="uid://c2v4euioql8k4" path="res://Textures/Instances/Icons/house.svg" id="2_nyy26"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gf7iu"]
 shader = ExtResource("2_a7vvj")
 shader_parameter/value = 0.5
-shader_parameter/color = null
+shader_parameter/color = Color(0, 0, 0, 1)
 
 [node name="ColorChoice" type="Control"]
 custom_minimum_size = Vector2(25, 25)

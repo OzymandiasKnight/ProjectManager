@@ -278,4 +278,3 @@ func use_node(node:WorkNode):
 		node.set_typing()
 	if node.type == "Image":
 		pass
-

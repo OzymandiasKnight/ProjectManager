@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dkv2041id3sxo"]
 
 [ext_resource type="Theme" uid="uid://d3mc6bsqrw6m6" path="res://RoundTheme.tres" id="1_walu3"]
-[ext_resource type="Script" path="res://Codes/Instances/Interface/Project.gd" id="2_1cb16"]
+[ext_resource type="Script" uid="uid://b5ffqn33q8sei" path="res://Codes/Instances/Interface/Project.gd" id="2_1cb16"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_55xfh"]
 font_size = 15
@@ -41,8 +41,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xrx0j"]
 _data = {
-"Hover": SubResource("Animation_e7msi"),
-"RESET": SubResource("Animation_f4p02")
+&"Hover": SubResource("Animation_e7msi"),
+&"RESET": SubResource("Animation_f4p02")
 }
 
 [node name="Project" type="Control"]
@@ -135,7 +135,7 @@ text = "Groups : "
 
 [node name="Animations" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_xrx0j")
+&"": SubResource("AnimationLibrary_xrx0j")
 }
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

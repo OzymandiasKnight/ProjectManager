@@ -166,4 +166,3 @@ func _on_resize_gui_input(event):
 				set_size_factor(size_factor + drag.x/ProjectHandler.zoom)
 			else:
 				set_size_factor(size_factor + drag.y/ProjectHandler.zoom)
-
