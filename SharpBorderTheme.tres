@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://ctuiv2s4xinn4"]
+
+[ext_resource type="FontVariation" uid="uid://befqq4vmcn4s4" path="res://DefaultFont.tres" id="1_1yivd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8w6c4"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[resource]
+default_font = ExtResource("1_1yivd")
+Panel/styles/panel = SubResource("StyleBoxFlat_8w6c4")

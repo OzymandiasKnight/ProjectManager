@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="NodePointer.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.104894"
+     inkscape:cx="-19.45888"
+     inkscape:cy="229.88631"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect996"
+       is_visible="true"
+       lpeversion="1"
+       weight="25"
+       steps="2"
+       helper_size="1"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffffff;stroke-width:4.99995;stroke-linecap:round;stroke-miterlimit:100;paint-order:markers fill stroke"
+       d="M 49.999704,17.657154 C 39.999333,17.656783 19.999333,62.656033 24.999936,73.905613 30.000539,85.155194 70.000539,85.155194 75.000307,73.905985 80.000075,62.656775 60.000075,17.657525 49.999704,17.657154 Z"
+       id="path285"
+       sodipodi:nodetypes="cccc"
+       inkscape:path-effect="#path-effect996"
+       inkscape:original-d="m 49.999539,-4.8433052 c -9.999,22.5006242 -29.999,67.4998742 -40.0000002,89.9984992 20.0010002,0.001 60.0010002,0.001 80.0000002,0 -9.999,-22.498625 -29.999,-67.497875 -40,-89.9984992 z" />
+  </g>
+</svg>

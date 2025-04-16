@@ -1,0 +1,121 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://d3mc6bsqrw6m6"]
+
+[ext_resource type="FontVariation" uid="uid://befqq4vmcn4s4" path="res://DefaultFont.tres" id="1_1qjuu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe1wo"]
+bg_color = Color(0.752941, 0.752941, 0.752941, 1)
+draw_center = false
+border_width_top = 7
+border_color = Color(0.752941, 0.752941, 0.752941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e4axq"]
+draw_center = false
+border_width_top = 7
+border_color = Color(0.627451, 0.627451, 0.627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tqao"]
+draw_center = false
+border_width_top = 7
+border_color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbhne"]
+bg_color = Color(0, 0, 0, 1)
+draw_center = false
+border_width_top = 7
+border_color = Color(0.376471, 0.376471, 0.376471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_og6qi"]
+bg_color = Color(0.25098, 0.25098, 0.25098, 1)
+draw_center = false
+border_width_top = 7
+border_color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47wv1"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="SystemFont" id="SystemFont_1i0t3"]
+font_names = PackedStringArray("Manrope")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qr2k5"]
+bg_color = Color(0.752941, 0.752941, 0.752941, 1)
+draw_center = false
+border_width_right = 7
+border_color = Color(0.752941, 0.752941, 0.752941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e25g0"]
+draw_center = false
+border_width_left = 7
+border_color = Color(0.627451, 0.627451, 0.627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jksa"]
+draw_center = false
+border_width_left = 7
+border_color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xiii"]
+bg_color = Color(0, 0, 0, 1)
+draw_center = false
+border_width_left = 7
+border_color = Color(0.376471, 0.376471, 0.376471, 1)
+expand_margin_top = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bk8ym"]
+bg_color = Color(0.25098, 0.25098, 0.25098, 1)
+draw_center = false
+border_width_left = 7
+border_color = Color(0.25098, 0.25098, 0.25098, 1)
+expand_margin_top = 4.0
+
+[resource]
+default_font = ExtResource("1_1qjuu")
+default_font_size = 18
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/decrement_pressed = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/icons/increment_pressed = null
+HScrollBar/styles/grabber = SubResource("StyleBoxFlat_qe1wo")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_e4axq")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_7tqao")
+HScrollBar/styles/scroll = SubResource("StyleBoxFlat_bbhne")
+HScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_og6qi")
+Panel/styles/panel = SubResource("StyleBoxFlat_47wv1")
+TextEdit/colors/background_color = Color(1, 1, 1, 1)
+TextEdit/colors/caret_background_color = Color(0, 0, 0, 1)
+TextEdit/colors/caret_color = Color(0, 0, 0, 0.501961)
+TextEdit/colors/current_line_color = Color(0, 0, 0, 1)
+TextEdit/colors/font_color = Color(1, 1, 1, 1)
+TextEdit/colors/font_outline_color = Color(0, 0, 0, 0.501961)
+TextEdit/colors/font_placeholder_color = Color(0.698039, 0.698039, 0.698039, 0)
+TextEdit/colors/font_readonly_color = Color(0, 0, 0, 1)
+TextEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+TextEdit/colors/search_result_border_color = Color(0, 0, 0, 1)
+TextEdit/colors/search_result_color = Color(0, 0, 0, 1)
+TextEdit/colors/selection_color = Color(0, 0, 0, 0.25098)
+TextEdit/colors/word_highlighted_color = Color(0, 0, 0, 0.25098)
+TextEdit/constants/caret_width = 2
+TextEdit/constants/line_spacing = 2
+TextEdit/constants/outline_size = 4
+TextEdit/font_sizes/font_size = 16
+TextEdit/fonts/font = SubResource("SystemFont_1i0t3")
+TextEdit/icons/space = null
+TextEdit/icons/tab = null
+TextEdit/styles/focus = null
+TextEdit/styles/normal = null
+TextEdit/styles/read_only = null
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/decrement_pressed = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/icons/increment_pressed = null
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_qr2k5")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_e25g0")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_3jksa")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_0xiii")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_bk8ym")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cksut3e7sa137"]
+
+[ext_resource type="Script" path="res://Codes/Uniques/Systems/NodeMap.gd" id="1_f8ksb"]
+[ext_resource type="Texture2D" uid="uid://cvgw5usmbpk55" path="res://Textures/Uniques/Systems/CircleMap.svg" id="1_mssl2"]
+
+[node name="CircularMap" type="Control"]
+custom_minimum_size = Vector2(204, 120)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_f8ksb")
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Center"]
+layout_mode = 2
+
+[node name="Circle" type="Sprite2D" parent="Center/Control"]
+self_modulate = Color(0.403922, 1, 1, 1)
+scale = Vector2(0.265, 0.265)
+texture = ExtResource("1_mssl2")

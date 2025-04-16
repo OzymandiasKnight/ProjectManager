@@ -1,0 +1,352 @@
+[gd_scene load_steps=11 format=3 uid="uid://w68kt8niyvyk"]
+
+[ext_resource type="Script" path="res://Codes/Uniques/Menus/ProjectManager.gd" id="1_dici2"]
+[ext_resource type="Theme" uid="uid://d3mc6bsqrw6m6" path="res://RoundTheme.tres" id="2_8uqug"]
+[ext_resource type="Script" path="res://Codes/Instances/Classes/ScreenGrid.gd" id="3_8lo0y"]
+[ext_resource type="PackedScene" uid="uid://5prbtcy0lb1l" path="res://Scenes/Uniques/Systems/Settings.tscn" id="5_4wqg1"]
+[ext_resource type="Texture2D" uid="uid://dpyjs18hfoswc" path="res://Textures/Instances/Icons/reload.svg" id="5_10dvw"]
+[ext_resource type="Theme" uid="uid://pg3x15qrd5nn" path="res://BorderTheme.tres" id="5_d22bn"]
+[ext_resource type="LabelSettings" uid="uid://cwm3fv3pd67an" path="res://FontOutline.tres" id="7_w6j1b"]
+[ext_resource type="Texture2D" uid="uid://dt2t1amek2b8q" path="res://Textures/Uniques/Visuals/Splashscreen.png" id="8_mufcy"]
+
+[sub_resource type="Animation" id="Animation_8d05p"]
+resource_name = "Load"
+length = 0.65
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mbftg"]
+_data = {
+"Load": SubResource("Animation_8d05p")
+}
+
+[node name="ProjectManager" type="Node2D"]
+script = ExtResource("1_dici2")
+
+[node name="Camera" type="Camera2D" parent="."]
+
+[node name="Screen" type="CanvasLayer" parent="."]
+
+[node name="Window" type="Control" parent="Screen"]
+custom_minimum_size = Vector2(1024, 640)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="ColorRect" parent="Screen/Window"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.984314, 0.972549, 0.8, 1)
+
+[node name="WorkNodes" type="Label" parent="Screen/Window"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+theme = ExtResource("2_8uqug")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 32
+text = "WorkNodes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="Screen/Window"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.225
+anchor_right = 0.85
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_8uqug")
+
+[node name="Grid" type="GridContainer" parent="Screen/Window/Scroll"]
+layout_mode = 2
+columns = 3
+script = ExtResource("3_8lo0y")
+safe_margin = 4.0
+item_size = 260.0
+
+[node name="TopBand" type="Control" parent="Screen/Window"]
+layout_mode = 1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.2
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Searchbar" type="LineEdit" parent="Screen/Window/TopBand"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.8
+anchor_bottom = 0.05
+placeholder_text = "Search Project"
+
+[node name="NewProject" type="Button" parent="Screen/Window/TopBand"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_right = 0.45
+anchor_bottom = 0.05
+text = "Create New Project +"
+
+[node name="Refresh" type="Button" parent="Screen/Window/TopBand"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.85
+anchor_right = 0.95
+anchor_bottom = 0.05
+offset_right = 283.6
+offset_bottom = 354.0
+scale = Vector2(0.08, 0.08)
+icon = ExtResource("5_10dvw")
+
+[node name="SettingsBlocker" type="Control" parent="Screen/Window"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Settings" parent="Screen/Window/SettingsBlocker" instance=ExtResource("5_4wqg1")]
+layout_mode = 1
+
+[node name="ProjectCreation" type="Control" parent="Screen/Window"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Project" type="Control" parent="Screen/Window/ProjectCreation"]
+layout_mode = 1
+anchor_left = 0.15
+anchor_top = 0.3
+anchor_right = 0.85
+anchor_bottom = 0.6
+theme = ExtResource("2_8uqug")
+
+[node name="Panel" type="Panel" parent="Screen/Window/ProjectCreation/Project"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Border" type="Panel" parent="Screen/Window/ProjectCreation/Project/Panel"]
+modulate = Color(2, 2, 2, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_d22bn")
+
+[node name="Confirm" type="Button" parent="Screen/Window/ProjectCreation/Project"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.6
+anchor_right = 0.4
+anchor_bottom = 0.9
+text = "Create Project"
+
+[node name="Cancel" type="Button" parent="Screen/Window/ProjectCreation/Project"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 0.6
+anchor_right = 0.9
+anchor_bottom = 0.9
+text = "Cancel"
+
+[node name="Name" type="LineEdit" parent="Screen/Window/ProjectCreation/Project"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.05
+anchor_right = 0.8
+anchor_bottom = 0.25
+placeholder_text = "Project Name"
+context_menu_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="ProjectModification" type="Control" parent="Screen/Window"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Project" type="Control" parent="Screen/Window/ProjectModification"]
+layout_mode = 1
+anchor_left = 0.15
+anchor_top = 0.2
+anchor_right = 0.85
+anchor_bottom = 0.8
+
+[node name="Panel" type="Panel" parent="Screen/Window/ProjectModification/Project"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_8uqug")
+
+[node name="Border" type="Panel" parent="Screen/Window/ProjectModification/Project/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+theme = ExtResource("5_d22bn")
+
+[node name="DeleteProject" type="Button" parent="Screen/Window/ProjectModification/Project"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.8
+anchor_right = 0.7
+anchor_bottom = 0.9
+text = "Delete"
+
+[node name="ProjectName" type="LineEdit" parent="Screen/Window/ProjectModification/Project"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.1
+text = "Default Project"
+placeholder_text = "Project Name"
+
+[node name="ProjectSave" type="Button" parent="Screen/Window/ProjectModification/Project"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.85
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.15
+text = "Save"
+
+[node name="Label" type="Label" parent="Screen/Window"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 1.0
+anchor_right = 0.975
+anchor_bottom = 1.0
+offset_top = -45.0
+offset_bottom = -15.0
+text = "By Ozymandias Studio"
+label_settings = ExtResource("7_w6j1b")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SplashScreen" type="Control" parent="Screen/Window"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBand" type="ColorRect" parent="Screen/Window/SplashScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BottomBand" type="ColorRect" parent="Screen/Window/SplashScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SplashScreen" type="TextureRect" parent="Screen/Window/SplashScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_mufcy")
+expand_mode = 1
+
+[node name="Animation" type="AnimationPlayer" parent="Screen/Window/SplashScreen"]
+libraries = {
+"": SubResource("AnimationLibrary_mbftg")
+}
+
+[connection signal="text_changed" from="Screen/Window/TopBand/Searchbar" to="." method="_on_searchbar_text_changed"]
+[connection signal="pressed" from="Screen/Window/TopBand/NewProject" to="." method="_on_new_project_pressed"]
+[connection signal="pressed" from="Screen/Window/TopBand/Refresh" to="." method="_on_refresh_pressed"]
+[connection signal="pressed" from="Screen/Window/ProjectCreation/Project/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="Screen/Window/ProjectCreation/Project/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Screen/Window/ProjectModification/Project/DeleteProject" to="." method="_on_delete_project_pressed"]
+[connection signal="pressed" from="Screen/Window/ProjectModification/Project/ProjectSave" to="." method="_on_project_save_pressed"]

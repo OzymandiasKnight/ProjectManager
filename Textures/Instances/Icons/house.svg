@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="house.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.5625561"
+     inkscape:cx="17.599368"
+     inkscape:cy="156.15439"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#c0c0c0;stroke-width:2.73861;stroke-linecap:round;stroke-miterlimit:100;paint-order:markers fill stroke"
+       id="rect246"
+       width="50"
+       height="60"
+       x="24.930887"
+       y="30.788818"
+       rx="5"
+       ry="5.9999995" />
+    <g
+       id="g620"
+       transform="translate(2.5e-8,-2.4999996)">
+      <rect
+         style="fill:#c0c0c0;stroke-width:2.5;stroke-linecap:round;stroke-miterlimit:100;paint-order:markers fill stroke"
+         id="rect254"
+         width="50"
+         height="50"
+         x="40.916286"
+         y="-29.696651"
+         rx="5"
+         ry="5"
+         transform="rotate(45)" />
+      <path
+         id="rect108"
+         style="fill:#ffffff;stroke-width:2.5;stroke-linecap:round;stroke-miterlimit:100;paint-order:markers fill stroke"
+         d="m 3.9690108,53.895204 c -1.9586811,1.958682 -1.9586811,5.112686 0,7.071368 l 3.5353184,3.535318 c 1.958682,1.958682 5.1126848,1.958681 7.0713668,0 L 49.930704,29.146881 85.286079,64.502255 c 1.958681,1.958681 5.112319,1.958317 7.071,-3.65e-4 l 3.535685,-3.535684 c 1.95868,-1.958681 1.95868,-5.111955 0,-7.070636 L 57.001706,15.004512 53.466389,11.469193 C 51.507706,9.5105123 48.354067,9.5101473 46.395387,11.468828 l -3.535685,3.535684 z"
+         inkscape:label="Roof" />
+    </g>
+  </g>
+</svg>

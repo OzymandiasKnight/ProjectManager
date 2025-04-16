@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://pg3x15qrd5nn"]
+
+[ext_resource type="FontVariation" uid="uid://befqq4vmcn4s4" path="res://DefaultFont.tres" id="1_jrndf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxwyt"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
+[resource]
+default_font = ExtResource("1_jrndf")
+Panel/styles/panel = SubResource("StyleBoxFlat_gxwyt")

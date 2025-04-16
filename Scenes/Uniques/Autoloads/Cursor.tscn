@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://brkhaosxkdwlx"]
+
+[ext_resource type="Script" path="res://Codes/Uniques/Autoloads/Cursor.gd" id="1_d1ngc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5erw"]
+size = Vector2(2, 2)
+
+[node name="Cursor" type="Node2D"]
+script = ExtResource("1_d1ngc")
+
+[node name="Mouse" type="Node2D" parent="."]
+
+[node name="GroupDetection" type="Area2D" parent="Mouse"]
+collision_layer = 16
+collision_mask = 16
+input_pickable = false
+
+[node name="Collision" type="CollisionShape2D" parent="Mouse/GroupDetection"]
+shape = SubResource("RectangleShape2D_y5erw")
+
+[connection signal="area_entered" from="Mouse/GroupDetection" to="." method="_on_group_detection_area_entered"]
+[connection signal="area_exited" from="Mouse/GroupDetection" to="." method="_on_group_detection_area_exited"]

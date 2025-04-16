@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://2l0vwnei157m"]
+
+[ext_resource type="Script" path="res://Codes/Instances/Interface/ColorChoice.gd" id="1_dqg4i"]
+[ext_resource type="Shader" path="res://Shaders/Multiply.gdshader" id="2_a7vvj"]
+[ext_resource type="Texture2D" uid="uid://c2v4euioql8k4" path="res://Textures/Instances/Icons/house.svg" id="2_nyy26"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gf7iu"]
+shader = ExtResource("2_a7vvj")
+shader_parameter/value = 0.5
+shader_parameter/color = null
+
+[node name="ColorChoice" type="Control"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -999.0
+offset_bottom = -615.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_dqg4i")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_gf7iu")
+position = Vector2(12.5, 12.5)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("2_nyy26")
+
+[connection signal="gui_input" from="Panel" to="." method="_on_panel_gui_input"]

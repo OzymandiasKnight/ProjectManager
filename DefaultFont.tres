@@ -1,0 +1,11 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://befqq4vmcn4s4"]
+
+[sub_resource type="SystemFont" id="SystemFont_hw2cj"]
+font_names = PackedStringArray("Manrope")
+font_weight = 600
+
+[resource]
+base_font = SubResource("SystemFont_hw2cj")
+variation_opentype = {
+2003265652: 500
+}

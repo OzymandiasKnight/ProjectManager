@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=3 uid="uid://fy1ibwng86nq"]
+
+[ext_resource type="Script" path="res://Codes/Instances/Nodes/Note.gd" id="1_pb571"]
+[ext_resource type="Theme" uid="uid://d3mc6bsqrw6m6" path="res://RoundTheme.tres" id="2_qqu40"]
+[ext_resource type="Theme" uid="uid://ctuiv2s4xinn4" path="res://SharpBorderTheme.tres" id="3_nkevb"]
+
+[sub_resource type="Animation" id="Animation_6uysc"]
+resource_name = "Modify"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Border:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nfk85"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Border:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qjglc"]
+_data = {
+"Modify": SubResource("Animation_6uysc"),
+"RESET": SubResource("Animation_nfk85")
+}
+
+[node name="Note" type="Control" node_paths=PackedStringArray("animation_modify")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 450.0
+offset_bottom = 150.0
+mouse_filter = 1
+theme = ExtResource("2_qqu40")
+script = ExtResource("1_pb571")
+color = Color(0.984314, 0.972549, 0.8, 1)
+type = "Note"
+animation_modify = NodePath("Animation")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.25
+anchor_right = 1.25
+offset_top = -30.0
+theme_override_colors/font_color = Color(2, 2, 2, 1)
+theme_override_font_sizes/font_size = 20
+text = "Project"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Preview" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 150.0
+mouse_filter = 2
+
+[node name="Text" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_qqu40")
+theme_override_colors/font_color = Color(2, 2, 2, 1)
+theme_override_font_sizes/font_size = 24
+text = "TRY THIS SUPER FONT ON ME"
+context_menu_enabled = false
+drag_and_drop_selection_enabled = false
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Top" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -5.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 9
+
+[node name="Bottom" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 9
+
+[node name="Left" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -5.0
+grow_vertical = 2
+mouse_default_cursor_shape = 10
+
+[node name="Right" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 10
+
+[node name="Border" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(2, 2, 2, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("3_nkevb")
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qjglc")
+}
+
+[connection signal="gui_input" from="Text" to="." method="_on_text_gui_input"]
+[connection signal="gui_input" from="Top" to="." method="_on_top_gui_input"]
+[connection signal="gui_input" from="Bottom" to="." method="_on_bottom_gui_input"]
+[connection signal="gui_input" from="Left" to="." method="_on_left_gui_input"]
+[connection signal="gui_input" from="Right" to="." method="_on_right_gui_input"]

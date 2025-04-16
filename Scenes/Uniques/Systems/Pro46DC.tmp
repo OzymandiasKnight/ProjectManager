@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://6g5i1wm5tr6j"]
+
+[ext_resource type="Script" path="res://Codes/Uniques/Systems/ProjectHolder.gd" id="1_4eibw"]
+[ext_resource type="PackedScene" uid="uid://ckwbm54q6n26x" path="res://Scenes/Instances/Nodes/Group.tscn" id="2_gecgn"]
+[ext_resource type="PackedScene" uid="uid://tcs04u0p3bxq" path="res://Scenes/Uniques/Systems/ProjectUI.tscn" id="3_unin5"]
+
+[node name="ProjectHolder" type="Node2D"]
+script = ExtResource("1_4eibw")
+
+[node name="Camera" type="Camera2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("3_unin5")]
+visible = false
+
+[node name="Nodes" type="Node" parent="."]
+
+[node name="Group" parent="Nodes" instance=ExtResource("2_gecgn")]

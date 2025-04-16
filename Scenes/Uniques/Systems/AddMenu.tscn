@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=3 uid="uid://jh840fnsvoqa"]
+
+[ext_resource type="PackedScene" uid="uid://b2eie72higlnt" path="res://Scenes/Instances/Nodes/SlidingNode.tscn" id="1_3cdlx"]
+[ext_resource type="Script" path="res://Codes/Uniques/Systems/AddMenu.gd" id="1_m0toa"]
+[ext_resource type="Theme" uid="uid://d3mc6bsqrw6m6" path="res://RoundTheme.tres" id="3_7fxkt"]
+
+[sub_resource type="Animation" id="Animation_quldl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_08iof"]
+resource_name = "Select"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.25, 1.25), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3b1g8"]
+_data = {
+"RESET": SubResource("Animation_quldl"),
+"Select": SubResource("Animation_08iof")
+}
+
+[node name="WorkNodeMenu" type="Control"]
+layout_mode = 3
+anchor_top = 0.1
+anchor_right = 0.1
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("1_m0toa")
+
+[node name="HorizontalCenterer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.05
+anchor_right = 1.0
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VerticalCenterer" type="VBoxContainer" parent="HorizontalCenterer"]
+layout_mode = 2
+
+[node name="Group" parent="HorizontalCenterer/VerticalCenterer" instance=ExtResource("1_3cdlx")]
+layout_mode = 2
+
+[node name="Note" parent="HorizontalCenterer/VerticalCenterer" instance=ExtResource("1_3cdlx")]
+layout_mode = 2
+
+[node name="Image" parent="HorizontalCenterer/VerticalCenterer" instance=ExtResource("1_3cdlx")]
+layout_mode = 2
+
+[node name="Effect" type="Panel" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+pivot_offset = Vector2(25, 25)
+theme = ExtResource("3_7fxkt")
+
+[node name="Animation" type="AnimationPlayer" parent="Effect"]
+libraries = {
+"": SubResource("AnimationLibrary_3b1g8")
+}

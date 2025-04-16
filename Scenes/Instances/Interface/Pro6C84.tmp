@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkv2041id3sxo"]
+
+[ext_resource type="Theme" uid="uid://d3mc6bsqrw6m6" path="res://RoundTheme.tres" id="1_walu3"]
+[ext_resource type="Script" path="res://Codes/Instances/Interface/Project.gd" id="2_1cb16"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_55xfh"]
+font_size = 15
+
+[node name="Project" type="Control"]
+custom_minimum_size = Vector2(250, 350)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -774.0
+offset_bottom = -290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_walu3")
+script = ExtResource("2_1cb16")
+
+[node name="Card" type="Panel" parent="."]
+modulate = Color(0.359069, 0.359069, 0.359069, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Band" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.15
+
+[node name="Panel" type="Panel" parent="Band"]
+modulate = Color(0.65834, 0.65834, 0.65834, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Band"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "WWWWWWWWWWWWWW"
+label_settings = SubResource("LabelSettings_55xfh")
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Informations" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.05
+anchor_top = 0.2
+anchor_right = 0.95
+anchor_bottom = 0.95
+
+[node name="Vertical" type="VBoxContainer" parent="Informations"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nodes" type="Label" parent="Informations/Vertical"]
+layout_mode = 2
+text = "Total Nodes : 31"
+
+[node name="Groups" type="Label" parent="Informations/Vertical"]
+layout_mode = 2
+text = "Groups : 31"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://5prbtcy0lb1l"]
+
+[ext_resource type="Script" path="res://Codes/Uniques/Systems/Settings.gd" id="1_k4br1"]
+[ext_resource type="Theme" uid="uid://d3mc6bsqrw6m6" path="res://RoundTheme.tres" id="2_wgwtj"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchor_left = 0.15
+anchor_top = 0.05
+anchor_right = 0.85
+anchor_bottom = 0.9
+script = ExtResource("1_k4br1")
+
+[node name="Background" type="Panel" parent="."]
+modulate = Color(0.201527, 0.201527, 0.201527, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_wgwtj")
+
+[node name="LeftVertical" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.1
+anchor_right = 0.4
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MouseSpeed" type="Control" parent="LeftVertical"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="RelativeSpeed" type="CheckBox" parent="LeftVertical/MouseSpeed"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+
+[node name="Label" type="Label" parent="LeftVertical/MouseSpeed"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Mouse speed relative to zoom :"
+horizontal_alignment = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightVertical" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55
+anchor_top = 0.1
+anchor_right = 0.95
+anchor_bottom = 0.95
+
+[node name="MainColor" type="Control" parent="RightVertical"]
+layout_mode = 2
+
+[node name="ColorPicker" type="ColorPicker" parent="RightVertical/MainColor"]
+visible = false
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 303.0
+edit_alpha = false
+can_add_swatches = false
+sampler_visible = false
+color_modes_visible = false
+sliders_visible = false
+presets_visible = false
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="RightVertical/MainColor"]
+layout_mode = 0
+offset_right = 304.0
+offset_bottom = 146.0
+text = "Main Color"
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
